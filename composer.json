@@ -1,0 +1,25 @@
+{
+    "name": "umis/uframe",
+    "description": "UMIS Framework",
+    "type": "library",
+    "require": {
+        "smarty/smarty": "^3.1@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "R-jay Lamadrid",
+            "email": "rjay.lamadrid@cbsua.edu.ph"
+        },
+        {
+            "name": "CBSUA UMIS",
+            "email": "umis@cbsua.edu.ph"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "umis\\frame\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
