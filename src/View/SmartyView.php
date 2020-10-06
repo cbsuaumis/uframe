@@ -11,6 +11,8 @@ class SmartyView {
 
     private static function init () {
         self::$smarty = new \Smarty ();
+        self::$smarty->setTemplateDir ('templates');
+        self::$smarty->setCompileDir ('templates_c');
     }
 
     private static function display ($tpl, $vars = []) {
