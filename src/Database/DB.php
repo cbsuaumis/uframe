@@ -22,12 +22,12 @@ class DB {
 
     // DATABASE OPERATIONS
     private function exec ($args) {
-        $args[1] = isset ($args[1]) ? is_array ($args[1]) ? $args[1] : [$args[1]] : []; // Convert vars to array IF NOT array
+        $args[1] = isset ($args[1]) ? (is_array ($args[1]) ? $args[1] : [$args[1]]) : []; // Convert vars to array IF NOT array
         try {
             if (!($query = $this->db->prepare($args[0]))) return;
             if (!($query->execute($args[1]))) return;
             return $query;
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             return;
         }
         return null;
